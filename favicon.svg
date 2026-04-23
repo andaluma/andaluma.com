@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#1A1208"/>
+  <clipPath id="ac">
+    <text x="16" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="30" font-weight="900">A</text>
+  </clipPath>
+  <rect x="0" y="0"  width="32" height="8"  fill="#B83368" clip-path="url(#ac)"/>
+  <rect x="0" y="8"  width="32" height="8"  fill="#0A7A88" clip-path="url(#ac)"/>
+  <rect x="0" y="16" width="32" height="8"  fill="#C98A10" clip-path="url(#ac)"/>
+  <rect x="0" y="24" width="32" height="8"  fill="#E04F28" clip-path="url(#ac)"/>
+</svg>
