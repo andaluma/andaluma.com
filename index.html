@@ -134,7 +134,7 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
   <ul class="nav-links">
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="mailto:info@andaluma.com" class="nav-contact">Get in touch</a></li>
+    <li><a href="mailto:info@andaluma.com" class="nav-contact" id="contact-btn" onclick="handleContact(event)">Get in touch</a></li>
   </ul>
 </nav>
 
@@ -221,7 +221,7 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <div class="venture-url">vivebonitoblog.com <span class="card-arrow">↗</span></div>
     </a>
 
-    <a href="https://vaetestament.com" class="venture-card c-teal" target="_blank">
+    <a href="https://vaetestament.nl" class="venture-card c-teal" target="_blank">
       <div class="card-top">
         <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
         <div class="card-badges"><div class="venture-langs"><span class="lang-badge">EN</span><span class="lang-badge">AR</span><span class="lang-badge">ES</span></div></div>
@@ -229,7 +229,7 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <p class="venture-subtitle">Legal &amp; estate services · UAE</p>
       <h3 class="venture-name">VAE Testament</h3>
       <p class="venture-desc">Testament and estate planning for residents in the UAE — protecting your legacy and assets with legal clarity and personal guidance.</p>
-      <div class="venture-url">vaetestament.com <span class="card-arrow">↗</span></div>
+      <div class="venture-url">vaetestament.nl <span class="card-arrow">↗</span></div>
     </a>
 
     <div class="venture-card c-amber">
@@ -243,7 +243,7 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <div class="venture-url">In development <span class="card-arrow">—</span></div>
     </div>
 
-    <a href="https://vivebonitoglamping.com" class="venture-card c-forest" target="_blank">
+    <a href="https://vivebonitoglamping.site" class="venture-card c-forest" target="_blank">
       <div class="card-top">
         <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
         <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span><span class="lang-badge">EN</span></div></div>
@@ -251,7 +251,7 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <p class="venture-subtitle">Glamping products · Peru</p>
       <h3 class="venture-name">ViveBonito Glamping</h3>
       <p class="venture-desc">Curated glamping setups and tent design for the Peruvian market — bringing architectural thinking and natural materials to the outdoor living space.</p>
-      <div class="venture-url">vivebonitoglamping.com <span class="card-arrow">↗</span></div>
+      <div class="venture-url">vivebonitoglamping.site <span class="card-arrow">↗</span></div>
     </a>
 
     <a href="https://baracacapital.com" class="venture-card c-ref" target="_blank">
@@ -276,13 +276,36 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="https://www.instagram.com/vivebonitofamily/" target="_blank">@vivebonitofamily</a></li>
     <li><a href="https://vivebonitoblog.com" target="_blank">ViveBonito</a></li>
-    <li><a href="https://vaetestament.com" target="_blank">VAE Testament</a></li>
+    <li><a href="https://vaetestament.nl" target="_blank">VAE Testament</a></li>
   </ul>
   <div class="footer-contact">
     Invoicing &amp; enquiries<br>
     <a href="mailto:info@andaluma.com">info@andaluma.com</a>
   </div>
 </footer>
+
+
+<script>
+function handleContact(e) {
+  // Try mailto first — if it fails show a small tooltip with the email
+  var btn = document.getElementById('contact-btn');
+  // Show tooltip regardless as a helpful cue
+  var existing = document.getElementById('contact-tip');
+  if (existing) { existing.remove(); return; }
+  var tip = document.createElement('div');
+  tip.id = 'contact-tip';
+  tip.innerHTML = 'info@andaluma.com <span onclick="copyEmail()" style="cursor:pointer;text-decoration:underline">copy</span>';
+  tip.style.cssText = 'position:fixed;top:60px;right:20px;background:#1A1208;color:#fff;padding:10px 16px;border-radius:4px;font-size:13px;z-index:9999;font-family:sans-serif;box-shadow:0 4px 20px rgba(0,0,0,0.3);';
+  document.body.appendChild(tip);
+  setTimeout(function(){ if(tip.parentNode) tip.remove(); }, 4000);
+}
+function copyEmail() {
+  navigator.clipboard.writeText('info@andaluma.com').then(function(){
+    var tip = document.getElementById('contact-tip');
+    if(tip) { tip.innerHTML = 'Copied!'; setTimeout(function(){ tip.remove(); }, 1500); }
+  });
+}
+</script>
 
 </body>
 </html>
