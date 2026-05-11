@@ -82,7 +82,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 4rem; 
 .ventures-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
 .venture-card { border-radius:6px; padding:2.25rem; text-decoration:none; color:#fff; display:flex; flex-direction:column; gap:0.9rem; position:relative; overflow:hidden; transition:transform 0.2s,box-shadow 0.2s; min-height:280px; }
 .venture-card:hover { transform:translateY(-3px); box-shadow:0 14px 44px rgba(26,18,8,0.16); }
-.c-berry{background:var(--berry);} .c-teal{background:var(--teal);} .c-amber{background:var(--amber);} .c-forest{background:var(--forest);}
+.c-berry{background:var(--berry);} .c-teal{background:var(--teal);} .c-amber{background:var(--amber);} .c-forest{background:var(--forest);} .c-coral{background:var(--coral);}
 .c-ref { background:#EAE3D4; color:var(--dark); border:1.5px solid var(--border); }
 .card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:0.5rem; }
 .venture-icon { width:2.5rem; height:2.5rem; border-radius:50%; background:rgba(255,255,255,0.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
@@ -210,15 +210,26 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
   </div>
   <div class="ventures-grid">
 
-    <a href="https://vivebonitoblog.com" class="venture-card c-berry" target="_blank">
+    <div class="venture-card c-amber">
       <div class="card-top">
-        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span></div></div>
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9 15.3 15.3 0 014-9z"/></svg></div>
+        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">EN</span><span class="lang-badge">ES</span></div><span class="soon-badge">Coming soon</span></div>
       </div>
-      <p class="venture-subtitle">Lifestyle &amp; design content</p>
-      <h3 class="venture-name">ViveBonito Blog</h3>
-      <p class="venture-desc">Daniella's editorial brand — architecture, interior design and the art of living beautifully, for the Spanish-speaking world. Home on Instagram, Pinterest and blog.</p>
-      <div class="venture-url">vivebonitoblog.com <span class="card-arrow">↗</span></div>
+      <p class="venture-subtitle">Real estate · Nomad advisory</p>
+      <h3 class="venture-name">Nomad Portfolio Advisory</h3>
+      <p class="venture-desc">Specialised real estate portfolio advisory for digital nomads and location-independent families — building lasting wealth without a fixed base.</p>
+      <div class="venture-url">In development <span class="card-arrow">—</span></div>
+    </div>
+
+    <a href="https://baracacapital.com" class="venture-card c-ref" target="_blank">
+      <div class="card-top">
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span><span class="lang-badge">EN</span></div><span class="ref-badge">Partner role</span></div>
+      </div>
+      <p class="venture-subtitle">Real estate advisory · Dubai</p>
+      <h3 class="venture-name">Baraca Capital</h3>
+      <p class="venture-desc">RERA-licensed real estate advisory focused on Latin American investors in Dubai. André serves as partner and portfolio advisor.</p>
+      <div class="venture-url">baracacapital.com <span class="card-arrow">↗</span></div>
     </a>
 
     <a href="https://vaetestament.nl" class="venture-card c-teal" target="_blank">
@@ -232,16 +243,27 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <div class="venture-url">vaetestament.nl <span class="card-arrow">↗</span></div>
     </a>
 
-    <div class="venture-card c-amber">
+    <a href="https://vivebonitoblog.com" class="venture-card c-berry" target="_blank">
       <div class="card-top">
-        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15.3 15.3 0 014 9 15.3 15.3 0 01-4 9 15.3 15.3 0 01-4-9 15.3 15.3 0 014-9z"/></svg></div>
-        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">EN</span><span class="lang-badge">ES</span></div><span class="soon-badge">Coming soon</span></div>
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span></div></div>
       </div>
-      <p class="venture-subtitle">Real estate · Nomad advisory</p>
-      <h3 class="venture-name">Nomad Portfolio Advisory</h3>
-      <p class="venture-desc">Specialised real estate portfolio advisory for digital nomads and location-independent families — building lasting wealth without a fixed base.</p>
-      <div class="venture-url">In development <span class="card-arrow">—</span></div>
-    </div>
+      <p class="venture-subtitle">Lifestyle &amp; design content</p>
+      <h3 class="venture-name">ViveBonito Blog</h3>
+      <p class="venture-desc">Daniella's editorial brand — architecture, interior design and the art of living beautifully, for the Spanish-speaking world. Home on Instagram, Pinterest and blog.</p>
+      <div class="venture-url">vivebonitoblog.com <span class="card-arrow">↗</span></div>
+    </a>
+
+    <a href="https://vivebonitoacademy.com" class="venture-card c-coral" target="_blank">
+      <div class="card-top">
+        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
+        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span></div></div>
+      </div>
+      <p class="venture-subtitle">Creative education · Paper products</p>
+      <h3 class="venture-name">ViveBonito Academy</h3>
+      <p class="venture-desc">Daniella's online academy for Spanish-speaking designers and entrepreneurs — teaching how to imagine, design and launch stationery and paper product brands with soul.</p>
+      <div class="venture-url">vivebonitoacademy.com <span class="card-arrow">↗</span></div>
+    </a>
 
     <a href="https://vivebonitoglamping.site" class="venture-card c-forest" target="_blank">
       <div class="card-top">
@@ -252,17 +274,6 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <h3 class="venture-name">ViveBonito Glamping</h3>
       <p class="venture-desc">Curated glamping setups and tent design for the Peruvian market — bringing architectural thinking and natural materials to the outdoor living space.</p>
       <div class="venture-url">vivebonitoglamping.site <span class="card-arrow">↗</span></div>
-    </a>
-
-    <a href="https://baracacapital.com" class="venture-card c-ref" target="_blank">
-      <div class="card-top">
-        <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
-        <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span><span class="lang-badge">EN</span></div><span class="ref-badge">Partner role</span></div>
-      </div>
-      <p class="venture-subtitle">Real estate advisory · Dubai</p>
-      <h3 class="venture-name">Baraca Capital</h3>
-      <p class="venture-desc">RERA-licensed real estate advisory focused on Latin American investors in Dubai. André serves as partner and portfolio advisor.</p>
-      <div class="venture-url">baracacapital.com <span class="card-arrow">↗</span></div>
     </a>
 
   </div>
@@ -276,7 +287,9 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
     <li><a href="#ventures">Ventures</a></li>
     <li><a href="https://www.instagram.com/vivebonitofamily/" target="_blank">@vivebonitofamily</a></li>
     <li><a href="https://vivebonitoblog.com" target="_blank">ViveBonito</a></li>
+    <li><a href="https://vivebonitoacademy.com" target="_blank">ViveBonito Academy</a></li>
     <li><a href="https://vaetestament.nl" target="_blank">VAE Testament</a></li>
+    <li><a href="https://baracacapital.com" target="_blank">Baraca Capital</a></li>
   </ul>
   <div class="footer-contact">
     Invoicing &amp; enquiries<br>
