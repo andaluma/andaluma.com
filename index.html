@@ -14,7 +14,7 @@
   --cream:  #F7F2E8; --sand: #EDE5D4;
   --dark:   #1A1208; --coral: #E04F28;
   --berry:  #B83368; --teal: #0A7A88;
-  --amber:  #C98A10; --forest: #2D5C3A;
+  --amber:  #C98A10; --forest: #2D5C3A; --navy: #1B3D6B;
   --muted:  #7A6E5A; --border: rgba(26,18,8,0.11);
 }
 html { scroll-behavior: smooth; }
@@ -82,7 +82,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 4rem; 
 .ventures-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
 .venture-card { border-radius:6px; padding:2.25rem; text-decoration:none; color:#fff; display:flex; flex-direction:column; gap:0.9rem; position:relative; overflow:hidden; transition:transform 0.2s,box-shadow 0.2s; min-height:280px; }
 .venture-card:hover { transform:translateY(-3px); box-shadow:0 14px 44px rgba(26,18,8,0.16); }
-.c-berry{background:var(--berry);} .c-teal{background:var(--teal);} .c-amber{background:var(--amber);} .c-forest{background:var(--forest);} .c-coral{background:var(--coral);}
+.c-berry{background:var(--berry);} .c-teal{background:var(--teal);} .c-amber{background:var(--amber);} .c-forest{background:var(--forest);} .c-coral{background:var(--coral);} .c-navy{background:var(--navy);}
 .c-ref { background:#EAE3D4; color:var(--dark); border:1.5px solid var(--border); }
 .card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:0.5rem; }
 .venture-icon { width:2.5rem; height:2.5rem; border-radius:50%; background:rgba(255,255,255,0.14); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
@@ -221,7 +221,7 @@ footer { background:var(--sand); border-top:1.5px solid var(--border); padding:3
       <div class="venture-url">In development <span class="card-arrow">—</span></div>
     </div>
 
-    <a href="https://baracacapital.com" class="venture-card c-ref" target="_blank">
+    <a href="https://baracacapital.com" class="venture-card c-navy" target="_blank">
       <div class="card-top">
         <div class="venture-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
         <div class="card-badges"><div class="venture-langs"><span class="lang-badge">ES</span><span class="lang-badge">EN</span></div><span class="ref-badge">Partner role</span></div>
