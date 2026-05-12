@@ -50,7 +50,8 @@ body{min-height:100%;background:var(--cream);color:var(--dark);font-family:'DM S
 .intro strong{color:var(--dark)}
 
 /* Section anchors */
-.section-anchor{scroll-margin-top:20px}
+.section-anchor{scroll-margin-top:24px}
+.section-divider{margin:32px 0 0;padding:20px 0 0;border-top:2px solid var(--sand)}
 
 /* Filter bar */
 .filter-bar{position:sticky;top:0;z-index:50;background:var(--cream);padding:14px 0 10px;border-bottom:1px solid var(--sand)}
@@ -116,7 +117,7 @@ select.input-sm{width:auto;cursor:pointer;appearance:auto}
 .dropin-box .dropin-rate{font-size:13px;color:var(--dark);margin-bottom:2px}
 
 /* Editorial / collapsible sections */
-.editorial{background:var(--white);border-radius:14px;border:1px solid var(--sand);padding:24px 20px;margin:28px 0}
+.editorial{background:var(--white);border-radius:14px;border:1px solid var(--sand);padding:24px 20px;margin:12px 0}
 .editorial h2{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:14px}
 .editorial p{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:12px}
 .editorial ul{margin:8px 0 12px 16px;font-size:14px;color:var(--muted);line-height:1.8}
@@ -236,10 +237,16 @@ select.input-sm{width:auto;cursor:pointer;appearance:auto}
 
   <!-- ═══════════════════════════════ SCHOOLS ═══════════════════════════════ -->
   <div id="schools" class="section-anchor"></div>
-  <h2 style="font-family:'Playfair Display',serif;font-size:22px;margin:24px 0 8px;padding-top:8px">Schools &amp; Camps</h2>
+  <div class="section-divider"></div>
+  <div class="editorial">
+    <h2 class="section-toggle" @click="schoolsOpen=!schoolsOpen">
+      <span>Schools &amp; Camps</span>
+      <span class="toggle-hint" x-text="schoolsOpen ? '▲ Hide' : '▼ Show ' + filteredSchools.length + ' schools'"></span>
+    </h2>
+    <div x-show="schoolsOpen" x-collapse.duration.300ms>
 
   <!-- Filter bar -->
-  <div class="filter-bar">
+  <div class="filter-bar" style="margin-top:12px">
     <div class="filter-row">
       <span class="filter-label">Island</span>
       <button class="chip" :class="{'active': island === ''}" @click="island = ''">All</button>
@@ -472,6 +479,9 @@ select.input-sm{width:auto;cursor:pointer;appearance:auto}
     </template>
   </div>
 
+    </div><!-- end x-collapse for schools -->
+  </div><!-- end editorial wrapper for schools -->
+
   <!-- What we learned about schools -->
   <div class="editorial" x-data="{open:false}">
     <h2 class="section-toggle" @click="open=!open">
@@ -494,6 +504,7 @@ select.input-sm{width:auto;cursor:pointer;appearance:auto}
 
   <!-- ═══════════════════════════════ INSURANCE ═══════════════════════════════ -->
   <div id="insurance" class="section-anchor"></div>
+  <div class="section-divider"></div>
   <div class="editorial" x-data="{open:false}">
     <h2 class="section-toggle" @click="open=!open">
       <span>Health Insurance</span>
@@ -562,6 +573,7 @@ select.input-sm{width:auto;cursor:pointer;appearance:auto}
 
   <!-- ═══════════════════════════════ VISA ═══════════════════════════════ -->
   <div id="visa" class="section-anchor"></div>
+  <div class="section-divider"></div>
   <div class="future-section">
     <h3>Visa Logistics</h3>
     <p>Coming soon — stay durations by passport</p>
@@ -569,6 +581,7 @@ select.input-sm{width:auto;cursor:pointer;appearance:auto}
 
   <!-- ═══════════════════════════════ COMMUNITY ═══════════════════════════════ -->
   <div id="community" class="section-anchor"></div>
+  <div class="section-divider"></div>
   <div class="editorial" x-data="{open:true}">
     <h2 class="section-toggle" @click="open=!open">
       <span>Communities & Local Tips</span>
@@ -685,6 +698,7 @@ function schoolsApp() {
     childAge: null,
     arrivalMonth: 0,
     currency: 'IDR',
+    schoolsOpen: true,
     suggestions: [],
     showSuggestions: false,
     months: ['January','February','March','April','May','June','July','August','September','October','November','December'],
